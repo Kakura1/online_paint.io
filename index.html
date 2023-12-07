@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: baseline;
+        }     
+        #pizarra {
+            margin: 50px 100px;
+            width: 1400px;
+            height: 800px;
+            background-color: '#F5F5F5';
+            border: 3px solid black;
+            border-radius: 3px;
+        }
+        div {
+            width: 80px;
+            margin: auto;
+            padding-right: 200px;
+        }
+        button {
+            width: 35px;
+            height: 40px;
+            border-radius: 5px;
+            border: 3px solid black;
+            margin: 10px 20px;
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+        img {
+            width: 24px;
+            height: 24px;
+        }
+        #pencil, #eraser, #clear, #rectangulo, #circulo, #triangulo {
+            margin: 10px 20px;
+        }
+        #ancho {
+            width: 60px;
+            height: 15px;
+            margin: 10px;
+        }
+        #color {
+            width: 60px;
+            height: 30px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+        p {
+            width: 60px;
+            margin: 0 10px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(82, 33, 160)
+        }
+    </style>
+</head>
+<body>
+    <canvas id="pizarra"></canvas>
+    <div>
+        <button id="pencil"><img src="img/lapiz.png" alt="a"></button>
+        <button id="brocha"><img src="img/brocha.png" alt="b"></button>
+        <button id="eraser"><img src="img/borrador.png" alt="c"></button>
+        <button id="rectangulo"><img src="img/cuadrado.png" alt="a"></button>
+        <button id="circulo"><img src="img/circulo.png" alt="b"></button>
+        <button id="triangulo"><img src="img/triangulo.png" alt="c"></button>
+        <input type="color" id="color">
+        <p>Color</p>
+        <input type="range" name="" id="ancho" min="5" max="50" value="10" step="1">
+        <p>Tamaño</p>
+        <button id="clear"><img src="img/pizarra.png" alt=""></button>
+        <button id="save"><img src="img/descarga.png" alt=""></button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
